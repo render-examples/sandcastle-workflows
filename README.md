@@ -64,4 +64,3 @@ Locally, the workflow tasks run on your machine, and each agent still runs in a 
 - **Retries are safe to repeat.** Branch names are deterministic, the push is a force push to the agent's own branch, and the existing pull request is reused.
 - **Sandboxes never idle-suspend.** Sandcastle goes quiet in a sandbox while it does git work on the host, so the provider sets `idleTimeoutSeconds: 0`. Each sandbox's lifetime matches its task's timeout.
 - **`.sandcastle/.env` is removed from each clone.** Sandcastle forwards every key listed in that file from the host environment, and the host environment holds the Render and GitHub tokens.
-- **Render Sandboxes and Workflows are in beta.** APIs and limits may change. See the [Workflows limits](https://render.com/docs/workflows-limits) and [Sandboxes docs](https://render.com/docs/sandboxes).
