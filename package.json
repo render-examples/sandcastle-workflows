@@ -1,0 +1,28 @@
+{
+  "name": "sandcastle-workflows",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Run Sandcastle coding agents as a durable Render Workflow, each in its own Render Sandbox.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "dev": "render workflows dev -- npm start",
+    "trigger": "tsx --env-file-if-exists=.env scripts/trigger.ts",
+    "import-image": "tsx --env-file-if-exists=.env scripts/import-image.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-hero/sandcastle": "^0.14.0",
+    "@renderinc/sdk": "^1.6.0",
+    "tsx": "^4.20.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

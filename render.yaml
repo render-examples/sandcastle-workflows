@@ -1,0 +1,19 @@
+services:
+  - type: workflow
+    name: sandcastle-workflows
+    runtime: node
+    region: oregon
+    # Replace with your fork of this template.
+    repo: https://github.com/render-examples/sandcastle-workflows
+    branch: main
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: RENDER_API_KEY
+        sync: false
+      - key: RENDER_WORKSPACE_ID
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: CLAUDE_CODE_OAUTH_TOKEN
+        sync: false
