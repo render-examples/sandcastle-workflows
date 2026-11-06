@@ -12,6 +12,7 @@
     "dev": "render workflows dev -- npm start",
     "trigger": "tsx --env-file-if-exists=.env scripts/trigger.ts",
     "import-image": "tsx --env-file-if-exists=.env scripts/import-image.ts",
+    "doctor": "tsx --env-file-if-exists=.env scripts/doctor.ts",
     "test": "tsx --test test/*.test.ts",
     "typecheck": "tsc --noEmit"
   },
