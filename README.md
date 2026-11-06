@@ -14,11 +14,15 @@ Render Workflows provides durability: each task has its own retries and timeouts
 
 ## Deploy
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/render-examples/sandcastle-workflows)
+<a href="https://render.com/deploy-template/api/github/start?template_repo=sandcastle-workflows">
+  <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
+</a>
 
-[`docs/deploy.md`](docs/deploy.md) takes you from a fresh clone to a first pull request. It's written so a coding agent can follow it: open this repo in Claude Code, Cursor or Codex and ask it to deploy to Render using `docs/deploy.md`.
+The button copies this repo into your GitHub account and applies [`render.yaml`](render.yaml). Render asks for four values: a Render API key and workspace ID, a GitHub token for the target repo, and a Claude Code login. Before the first run, import the sandbox image once with `npm run import-image`. To change the prompts or config, set `repo:` in your copy's `render.yaml` to your copy.
 
-You'll need a Render API key and workspace ID, a GitHub token for the target repo, and a Claude Code login. Once it's live, start a run with:
+Or let your coding agent do it. [`docs/deploy.md`](docs/deploy.md) takes you from a fresh clone to a first pull request, and it's written for an agent to follow: open this repo in Claude Code, Cursor or Codex and ask it to deploy to Render using `docs/deploy.md`.
+
+Once it's live, start a run with:
 
 ```bash
 npm run trigger -- owner/repo            # works issues labelled "sandcastle"
